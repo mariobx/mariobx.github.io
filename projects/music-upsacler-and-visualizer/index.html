@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ39KC54R4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FJ39KC54R4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Marku - Portfolio</title>
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Sticky Footer Implementation */
+        html, body { height: 100%; margin: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            line-height: 1.5; 
+            background: #121212; 
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        
+        nav { 
+            background: #4A0404; 
+            color: #fff; 
+            padding: 0.75rem 2rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 2.5rem; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav a { color: #fff; text-decoration: none; transition: opacity 0.2s; }
+        nav a:hover { opacity: 0.7; }
+        
+        .dropdown { position: relative; cursor: pointer; display: flex; align-items: center; }
+        .dropdown-content { 
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0;
+            background: #4A0404; 
+            min-width: 220px; 
+            z-index: 1000; 
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .dropdown-content a { 
+            color: white; 
+            padding: 12px 16px; 
+            text-decoration: none; 
+            display: block; 
+            border-bottom: 1px solid rgba(255,255,255,0.1); 
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: rgba(255,255,255,0.1); }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        main { 
+            flex: 1; 
+            padding: 2rem 2rem; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        footer { 
+            background: #4A0404; 
+            color: #fff; 
+            padding: 1.5rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #fff; text-decoration: none; transition: opacity 0.2s; }
+        footer a:hover { opacity: 0.7; }
+        
+        .resume-container { border: 1px solid #333; border-radius: 8px; overflow: hidden; background: #1a1a1a; }
+        h1, h2, h3 { color: #fff; margin-top: 0; }
+
+        /* Small screen adjustments for Navbar */
+        @media (max-width: 600px) {
+            nav { gap: 1rem; padding: 0.75rem 1rem; font-size: 0.85rem; }
+            footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" style="font-weight: bold; font-size: 1rem;">Mario Marku</a>
+        <div class="dropdown">
+            <span>Projects <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+            <div class="dropdown-content">
+                
+                <a href="/projects/atherislitellm/">AtherisLiteLLM</a>
+                
+                <a href="/projects/framework-led-matrix/">Framework Led Matrix</a>
+                
+                <a href="/projects/grade-analysis/">Grading Analysis Tool</a>
+                
+                <a href="/projects/music-upsacler-and-visualizer/">Music Upsacler and Visualizer</a>
+                
+            </div>
+        </div>
+        <div class="dropdown">
+            <span>Resumes <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+            <div class="dropdown-content">
+                
+                <a href="/resumes/government_resume.pdf" target="_blank" rel="noopener noreferrer">Government Resume</a>
+                
+                <a href="/resumes/regular_resume.pdf" target="_blank" rel="noopener noreferrer">Regular Resume</a>
+                
+            </div>
+        </div>
+    </nav>
+    <main>
+        
+<article class="project-detail">
+    <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Music Upsacler and Visualizer</h1>
+        
+        <p style="font-style: italic; color: #aaa; font-size: 1.2rem; margin-top: 0;">
+            Upscales and visualizes songs with a before and after
+        </p>
+        
+    </header>
+
+    
+
+    <div class="description" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #eee;">
+        This was made because I already had logic to do upscaling, which was basically chaining different peoples tools to programatically do the best I can to upsacle old music from records players and vinyl. When I uploaded these initially, I just used a still image. I thought why not add some sort of visual and keep the main thing I cared about, which was the upscaling.<br><br>The audio on all of these videos is from the video on the right ("AFTER"). The only thing left behind is the visualize from the pre-processed audio (seen in "BEFORE"). <br><br>The youtuber <a href="https://www.youtube.com/@tsoding" target="_blank" rel="noopener noreferrer" style="color: #8F0707;">Tsoding</a> had created a tool in C which was a GUI to open audio files and create a visualizer for them. It is very snappy and quick, and I really wanted to use it, but I have little C knowledge. I just needed to have it be so instead of opening the GUI and passing the file through there, I can pass a file path to an audio file, and get back the visualization of the audio. I forked the project and had Gemini create the simple change, which now is on my github under <a href="https://github.com/mariobx/musializer-file-paths" target="_blank" rel="noopener noreferrer" style="color: #8F0707;">musializer-file-paths</a>.
+    </div>
+
+    <!-- Project Links -->
+    <div style="margin: 4rem 0; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        
+        <a href="https://github.com/mariobx/Music-Upsacler-and-Visualizer" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #181717; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; letter-spacing: 1px; transition: transform 0.2s;">
+            <i class="fab fa-github"></i> SOURCE CODE
+        </a>
+        
+
+        
+        <a href="https://pypi.org/project/Music-Upsacler-and-Visualizer/" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #3775a9; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; letter-spacing: 1px; transition: transform 0.2s;">
+            <i class="fab fa-python"></i> PyPI INDEX
+        </a>
+        
+    </div>
+
+    <!-- Masonry Gallery Section -->
+    
+    <section class="gallery-wrapper" style="margin-top: 5rem; border-top: 1px solid #333; padding-top: 3rem;">
+        <h2 style="margin-bottom: 3rem; text-align: center; letter-spacing: 2px;">PROJECT GALLERY</h2>
+        
+        <style>
+            .masonry-grid { column-count: 3; column-gap: 2.5rem; width: 100%; }
+            @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+            @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+        </style>
+
+        <div class="masonry-grid">
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <iframe style="width: 100%; height: 100%; border: none;" 
+                                        src="https://www.youtube-nocookie.com/embed/QEZlTJQ2y80?rel=0&modestbranding=1" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                </iframe>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Dil Jala Na Dilwale - Zubaida Khanum &quot;Koel (1959)&quot;
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <iframe style="width: 100%; height: 100%; border: none;" 
+                                        src="https://www.youtube-nocookie.com/embed/94KjoDjJsGs?rel=0&modestbranding=1" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                </iframe>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Shtatë Shaljanët(The Seven Men of Shala)(Kënga e Shtatë Shaljanëve) Traditional Albanian Folk Music
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <iframe style="width: 100%; height: 100%; border: none;" 
+                                        src="https://www.youtube-nocookie.com/embed/0UoluTwshJE?rel=0&modestbranding=1" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                </iframe>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Ferfelloj fellanza n&#x27;uje - Fitnete Rexha
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <a href="https://www.youtube.com/watch?v=uNQh-33EIgM" target="_blank" style="display: block; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/uNQh-33EIgM/maxresdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FF0000; color: white; width: 60px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Likhe Jo Khat Tujhe - Mohammed Rafi &quot;Kanyadaan&quot; (1968)
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <iframe style="width: 100%; height: 100%; border: none;" 
+                                        src="https://www.youtube-nocookie.com/embed/F1DnOqnQmGE?rel=0&modestbranding=1" 
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                </iframe>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Halil Gashi - Kendon Tomë Nikolla
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <a href="https://www.youtube.com/watch?v=sSW5_5hPFOc" target="_blank" style="display: block; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/sSW5_5hPFOc/maxresdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FF0000; color: white; width: 60px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Bure Naseeb mere Wairi Hoya Pyar Mera - Zubaida Khanum &quot;Chhoo Mantar&quot; (1958)
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <a href="https://www.youtube.com/watch?v=w8_H_4XtVYE" target="_blank" style="display: block; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/w8_H_4XtVYE/maxresdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FF0000; color: white; width: 60px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Moj Hatixhe, N&#x27;Shami T&#x27;Kuqe - Hamide Sadiku (1971)
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <a href="https://www.youtube.com/watch?v=MzM0HFD4izQ" target="_blank" style="display: block; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/MzM0HFD4izQ/maxresdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FF0000; color: white; width: 60px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Pyar Kiya To Darna Kya - Lata Mangeshkar &quot;Mughal-E-Azam (1960)&quot;
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <div style="position: relative; width: 100%; padding-bottom: 56.25%; background: #000; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            
+                                <a href="https://www.youtube.com/watch?v=fkoPdwZI6co" target="_blank" style="display: block; width: 100%; height: 100%;">
+                                    <img src="https://img.youtube.com/vi/fkoPdwZI6co/maxresdefault.jpg" alt="Watch on YouTube" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #FF0000; color: white; width: 60px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </a>
+                            
+                        </div>
+                    </div>
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    O Mere Dil Ke Chain - Kishore Kumar
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+</article>
+
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/mariobx" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> github.com/mariobx
+            </a>
+        </div>
+        <div style="opacity: 0.8; font-weight: bold;">
+            <a href="/" style="color: #fff; text-decoration: none;">Mario Marku</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mariobx/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/mariobx/ <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

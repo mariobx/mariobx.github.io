@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ39KC54R4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FJ39KC54R4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Marku - Portfolio</title>
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Sticky Footer Implementation */
+        html, body { height: 100%; margin: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            line-height: 1.5; 
+            background: #121212; 
+            color: #fff;
+            font-size: 0.95rem;
+        }
+        
+        nav { 
+            background: #4A0404; 
+            color: #fff; 
+            padding: 0.75rem 2rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 2.5rem; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav a { color: #fff; text-decoration: none; transition: opacity 0.2s; }
+        nav a:hover { opacity: 0.7; }
+        
+        .dropdown { position: relative; cursor: pointer; display: flex; align-items: center; }
+        .dropdown-content { 
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 0;
+            background: #4A0404; 
+            min-width: 220px; 
+            z-index: 1000; 
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .dropdown-content a { 
+            color: white; 
+            padding: 12px 16px; 
+            text-decoration: none; 
+            display: block; 
+            border-bottom: 1px solid rgba(255,255,255,0.1); 
+        }
+        .dropdown-content a:last-child { border-bottom: none; }
+        .dropdown-content a:hover { background-color: rgba(255,255,255,0.1); }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        main { 
+            flex: 1; 
+            padding: 2rem 2rem; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        footer { 
+            background: #4A0404; 
+            color: #fff; 
+            padding: 1.5rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #fff; text-decoration: none; transition: opacity 0.2s; }
+        footer a:hover { opacity: 0.7; }
+        
+        .resume-container { border: 1px solid #333; border-radius: 8px; overflow: hidden; background: #1a1a1a; }
+        h1, h2, h3 { color: #fff; margin-top: 0; }
+
+        /* Small screen adjustments for Navbar */
+        @media (max-width: 600px) {
+            nav { gap: 1rem; padding: 0.75rem 1rem; font-size: 0.85rem; }
+            footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" style="font-weight: bold; font-size: 1rem;">Mario Marku</a>
+        <div class="dropdown">
+            <span>Projects <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+            <div class="dropdown-content">
+                
+                <a href="/projects/atherislitellm/">AtherisLiteLLM</a>
+                
+                <a href="/projects/framework-led-matrix/">Framework Led Matrix</a>
+                
+                <a href="/projects/grade-analysis/">Grading Analysis Tool</a>
+                
+                <a href="/projects/music-upsacler-and-visualizer/">Music Upsacler and Visualizer</a>
+                
+            </div>
+        </div>
+        <div class="dropdown">
+            <span>Resumes <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+            <div class="dropdown-content">
+                
+                <a href="/resumes/government_resume.pdf" target="_blank" rel="noopener noreferrer">Government Resume</a>
+                
+                <a href="/resumes/regular_resume.pdf" target="_blank" rel="noopener noreferrer">Regular Resume</a>
+                
+            </div>
+        </div>
+    </nav>
+    <main>
+        
+<article class="project-detail">
+    <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">AtherisLiteLLM</h1>
+        
+        <p style="font-style: italic; color: #aaa; font-size: 1.2rem; margin-top: 0;">
+            Creates Atheris hooks for python functions using any LLM allowed by LiteLLM
+        </p>
+        
+    </header>
+
+    
+
+    <div class="description" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #eee;">
+        This project was created with the goal of finding a personal project which would fuse both Cybersecurity and AI. Since AI is the game at the moment, I felt it was crucial to bring both together in a novel and unique idea.<br><br>The tool takes prompts that you can make (or use what I have pre-placed) and creates runnable python files which fuzz 1 function out of the entire project. If you have a project with 98 functions (not including tests), then the tools output would be 98 unique python files designed to fuzz each function.<br><br>Note, the quality of the python files is determined by a lot of things. The main 2 questions to answer in order to get a good output: how good is the model you are using in terms of programming, and how good is your prompt.<br><br>I myself have not yet tested enough with different LLMs and prompts. There is research to be done using this tool regarding the outputs of differing LLMs and differing prompts.
+    </div>
+
+    <!-- Project Links -->
+    <div style="margin: 4rem 0; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+        
+        <a href="https://github.com/mariobx/AtherisLiteLLM" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #181717; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; letter-spacing: 1px; transition: transform 0.2s;">
+            <i class="fab fa-github"></i> SOURCE CODE
+        </a>
+        
+
+        
+        <a href="https://pypi.org/project/AtherisLiteLLM/" target="_blank" style="display: inline-block; padding: 1rem 2rem; background: #3775a9; color: #fff; text-decoration: none; border-radius: 30px; font-weight: bold; letter-spacing: 1px; transition: transform 0.2s;">
+            <i class="fab fa-python"></i> PyPI INDEX
+        </a>
+        
+    </div>
+
+    <!-- Masonry Gallery Section -->
+    
+    <section class="gallery-wrapper" style="margin-top: 5rem; border-top: 1px solid #333; padding-top: 3rem;">
+        <h2 style="margin-bottom: 3rem; text-align: center; letter-spacing: 2px;">PROJECT GALLERY</h2>
+        
+        <style>
+            .masonry-grid { column-count: 3; column-gap: 2.5rem; width: 100%; }
+            @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+            @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+        </style>
+
+        <div class="masonry-grid">
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <img src="/media/projects/gallery/Finding_FIles.png" alt="Tool is looking for fuzzing targets" style="width: 100%; height: auto; display: block;">
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Tool is looking for fuzzing targets
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <img src="/media/projects/gallery/Saving_Harnesses.png" alt="Showing different harnesses being created" style="width: 100%; height: auto; display: block;">
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Showing different harnesses being created
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <img src="/media/projects/gallery/Full_command_call.png" alt="Example command call" style="width: 100%; height: auto; display: block;">
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Example command call
+                </div>
+                
+            </div>
+            
+            <div class="masonry-item" style="break-inside: avoid; margin-bottom: 2.5rem; background: #1a1a1a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 1px solid #333; display: flex; flex-direction: column;">
+                
+                
+                    <img src="/media/projects/gallery/DPKT_example_output.png" alt="Created code (model: deepseek-coder)" style="width: 100%; height: auto; display: block;">
+                
+
+                
+                <div style="padding: 1rem; font-size: 0.9rem; color: #ccc; text-align: center; background: #222; border-top: 1px solid #333;">
+                    Created code (model: deepseek-coder)
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+</article>
+
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/mariobx" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> github.com/mariobx
+            </a>
+        </div>
+        <div style="opacity: 0.8; font-weight: bold;">
+            <a href="/" style="color: #fff; text-decoration: none;">Mario Marku</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mariobx/" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/mariobx/ <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
